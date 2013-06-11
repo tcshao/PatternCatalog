@@ -13,6 +13,10 @@ namespace PatternCatalog
             var strat = new Strategy();
 
             strat.Main();
+
+            var template = new Template.Headhunter();
+
+            template.Process();
         }
     }
 }

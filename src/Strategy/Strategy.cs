@@ -9,6 +9,7 @@ namespace PatternCatalog
     class Strategy
     {
         #region "Traditional"
+
         public interface IOperation
         {
             int Compute(int number);
@@ -36,9 +37,11 @@ namespace PatternCatalog
                 return Operation.Compute(number);
             }
         }
+
 #endregion
 
         #region "Functional"
+
         public class Calculator_v2
         {
             public Func<int, int> Compute { get; set; }
@@ -53,6 +56,7 @@ namespace PatternCatalog
                 return Compute(number);
             }
         }
+
         #endregion
         public void Main()
         {
