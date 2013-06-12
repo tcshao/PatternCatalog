@@ -8,8 +8,8 @@ namespace PatternCatalog
 {
     class Strategy
     {
-        #region "Traditional"
 
+        // Begin Traditional Implementation
         public interface IOperation
         {
             int Compute(int number);
@@ -37,11 +37,9 @@ namespace PatternCatalog
                 return Operation.Compute(number);
             }
         }
+        // End Traditional Implementation
 
-#endregion
-
-        #region "Functional"
-
+        // Begin Functional Implementation
         public class Calculator_v2
         {
             public Func<int, int> Compute { get; set; }
@@ -56,13 +54,12 @@ namespace PatternCatalog
                 return Compute(number);
             }
         }
+        // End Functional Implementation
 
-        #endregion
         public void Main()
         {
             // Traditional
             var calculator = new Calculator(new Operation());
-
             Console.WriteLine(calculator.Calculate(3));
 
             // Functional
