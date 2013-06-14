@@ -17,6 +17,10 @@ namespace PatternCatalog
             var template = new Template.Headhunter();
 
             template.Process();
+
+            var observer = new Observer();
+
+            observer.Main();
         }
     }
 }
