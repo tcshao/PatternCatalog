@@ -64,6 +64,7 @@ class MakeBatterTask < CompositeTask
     add_sub_task( AddDryIngredients.new )
     add_sub_task( Mix.new )
     puts 'End - Make Batter'
+    puts "Time Required! #{get_time_required}"
   end
 end
 
